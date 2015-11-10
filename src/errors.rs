@@ -12,7 +12,7 @@ pub enum BodyErrorCause {
     DecoderError(json::DecoderError)
 }
 
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct BodyError {
     pub detail: String,
     pub cause: BodyErrorCause
